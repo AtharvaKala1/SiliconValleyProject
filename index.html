@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+  <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Helping App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="form.js"></script>
+    <script defer src="sketch.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+
+  </head>
+  <body>
+      
+  <div class="container">
+    <div id="question-container" class="hide">
+      <div id="question">Get Your All Queries Clear :)</div>
+      <div id="query-buttons" class="btn-grid">
+        <button id="paper-btn" class="paper-btn btn hide">Previous Year Papers</button>
+        <button id="class-btn" class="class-btn btn hide">Class</button>
+        <button id="homework-btn" class="homework-btn btn hide">Homework</button>
+        <button id="query-btn" class="query-btn btn hide">Query</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div id="control-container">
+      <div id="question">Tell Us About You</div>
+      <button id="start-btn" class="start-btn btn">Teacher</button>
+      <button id="student-btn" class="student-btn btn">Student</button>
+      
+    </div>
+  </div>
+
+  <div class="controls1">
+    <div id="control-container1">
+      <div id="question">Work Is In Progress</div>
+  </div>
+</div>
+  
+
+    <div class="subjectContainer">
+      <div id="class-subjectContainer" class="hide">
+        <div id="subjects">Choose The Subject</div>
+        <button id="english-btn" class="english-btn btn hide">English</button>
+        <button id="hindi-btn" class="hindi-btn btn hide">Hindi</button>
+        <button id="maths-btn" class="maths-btn btn hide">Maths</button>
+        <button id="science-btn" class="science-btn btn hide">Science</button>
+        <button id="social science-btn" class="social science-btn btn hide">Social Science</button>
+        </div>
+      </div>
+  </div>
+
+  <div class="englishContainer">
+    <div id="class-englishContainer" class="hide">
+      <style>
+        input[type=text]{
+          width:100%;
+          border: 2px solid #aaa;
+          border-radius: 4px;
+          margin:8px 0;
+          outline: none;
+          padding: 8px;
+          box-sizing: border-box;
+          transition: .3s;
+        }
+  
+        input[type=text]:focus{
+          border-color: dodgerblue;
+          box-shadow: 0 0 8px 0 dodgerblue;
+        }
+      </style>
+      <input type="text" placeholder="About Today's Class">
+    </div>
+</div>
+
+<div class="subjectContainer1">
+  <div id="class-subjectContainer1" class="hide">
+    <div id="subjects1">Choose The Subject</div>
+    <button id="english1-btn" class="english1-btn btn hide">English</button>
+    <button id="hindi1-btn" class="hindi1-btn btn hide">Hindi</button>
+    <button id="maths1-btn" class="maths1-btn btn hide">Maths</button>
+    <button id="science1-btn" class="science1-btn btn hide">Science</button>
+    <button id="social science1-btn" class="social science1-btn btn hide">Social Science</button>
+    </div>
+  </div>
+</div>
+
+<div class="englishContainer1">
+  <div id="class-englishContainer1" class="hide">
+    <style>
+      input[type=text]{
+        width:100%;
+        border: 2px solid #aaa;
+        border-radius: 4px;
+        margin:8px 0;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: .3s;
+      }
+
+      input[type=text]:focus{
+        border-color: dodgerblue;
+        box-shadow: 0 0 8px 0 dodgerblue;
+      }
+    </style>
+    <input type="text" placeholder="About Today's Homework">
+  </div>
+</div>
+
+<div class="subjectContainer2">
+  <div id="class-subjectContainer2" class="hide">
+    <div id="subjects2">Choose The Subject</div>
+    <button id="english2-btn" class="english2-btn btn hide">English</button>
+    <button id="hindi2-btn" class="hindi2-btn btn hide">Hindi</button>
+    <button id="maths2-btn" class="maths2-btn btn hide">Maths</button>
+    <button id="science2-btn" class="science2-btn btn hide">Science</button>
+    <button id="social science2-btn" class="social science2-btn btn hide">Social Science</button>
+    </div>
+  </div>
+</div>
+
+<div class="previousPaperContainer">
+  <div id="class-previousPaperContainer" class="hide">
+    <ul>
+      <li>Papers
+        <ul>
+          <li>2019</li>
+          <li>2018</li>                                                                                                                                
+          <li>2017</li>
+          <li>2016</li>
+          <li>2015</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div class="formContainer">
+  <div id="class-formContainer" class="hide">
+  <div id="header"> </div>
+  <div id="Form">Form</div>
+        
+<input type="email" placeholder="email" id="email"></input>
+<input type="password" placeholder="password" id="password"></input>
+
+<button onclick="signUp()" id="signUp-btn" class="signUp-btn btn"> SignUp</button>
+<button onclick="signIn()" id="signIn-btn" class="signIn-btn btn"> Sign In</button>
+<button onclick="signOut()" id="signOut-btn" class="signOut-btn btn"> Sign Out </button>
+
+</div>
+</div>
+
+</body>
+</html>
